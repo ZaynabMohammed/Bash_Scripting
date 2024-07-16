@@ -1,0 +1,29 @@
+#! /bin/bash
+
+function square(){
+	arr2=()
+	for item in "${arr[@]}"
+	do
+		arr2+=($[$item*$item])
+	done
+	echo "Square Arry is [ ${arr2[@]} ]"	
+	
+}
+
+read -p "Enter num of arry: " num
+arr=()
+var=$num
+sum=0
+while [ $var -gt 0 ]
+do
+ 	read -p "Enter your $(($num-$var+1)) number:" n
+	arr+=($n)
+	sum=$[$sum+$n]
+	var=$[$var-1]
+done 
+
+echo "Your Arry is [ ${arr[@]} ]"
+echo "Avg= $[$sum/$num]"
+square
+
+

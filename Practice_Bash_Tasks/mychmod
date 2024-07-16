@@ -1,0 +1,9 @@
+#! /bin/bash
+#chmod all files & Dir under ~ to be executable#
+var=$(ls ~)
+
+for item in $var
+do
+	$(chmod u+x ~/${item})
+
+done

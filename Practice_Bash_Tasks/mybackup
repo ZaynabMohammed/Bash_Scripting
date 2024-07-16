@@ -1,0 +1,20 @@
+#! /bin/bash
+
+#list all files & dir in Home#
+var=$(ls ~)
+
+#Make a backup dir under Home if not exist#
+$(mkdir -p ~/backup)
+
+#BackUP only files under Home#
+#set +x
+for item in $var
+do
+	if [ -f ~/${item} ]
+	then
+		$(cp ~/${item} ~/backup)
+	else
+		continue
+ 	fi		
+done
+#set -x

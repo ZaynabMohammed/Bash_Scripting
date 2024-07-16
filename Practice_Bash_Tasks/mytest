@@ -1,0 +1,39 @@
+#! /bin/bash
+flag=0
+###check if arg is file or dir####
+if [ -e $1 ]
+then
+	if [ -d $1 ]
+	then
+		echo "This is a dir"
+		flag=1
+	elif [ -f $1 ]
+	then
+		echo "This a file"
+		flag=1
+ 	else
+		echo "This is not a file nor a Dir"
+	fi
+else
+	echo "your file or Dir isn't exist"
+
+fi
+
+#####check rwx########
+if [ $flag -eq 1 ]
+then
+	if [ -r $1 ]
+	then
+		echo "Readable"
+	fi	
+	if [ -w $1 ]
+	then
+		echo "Writable"
+	fi		
+	if [ -x $1 ]
+	then
+		echo "executable"
+	fi
+else
+echo "Error cannot check your input"	
+fi	

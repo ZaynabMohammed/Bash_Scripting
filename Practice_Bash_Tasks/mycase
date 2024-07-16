@@ -1,0 +1,20 @@
+#! /bin/bash
+
+read -p "Please, Enter your character:" val
+
+case "$val" in
+  [[:upper:]])
+		echo "Upper Case"
+		;;
+  [[:lower:]])
+		echo "Lower Case"
+		;;
+  [[:digit:]])
+		echo "Number"
+		;;
+  *)
+               echo "Nothing"
+		;;
+esac
+
+  	

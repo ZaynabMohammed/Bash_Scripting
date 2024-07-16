@@ -1,0 +1,13 @@
+#! /bin/bash
+
+
+echo $#
+set -x
+if [ $# -eq 1 ]
+then
+	$(cd $1)
+else
+	$(cd ~)
+set +x
+
+fi

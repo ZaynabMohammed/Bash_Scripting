@@ -1,0 +1,23 @@
+#! /bin/bash
+
+function list() {
+  	for item in $1
+	do
+		echo ${item}
+	done
+}
+
+select i in "ls" "ls -a" "exit"
+do
+	case $i in
+		"ls")
+		  	list "$(ls $1)"
+			;;
+		"ls -a")
+			list "$(ls -a $1)"
+			;;
+		"exit")
+			exit
+			;;
+	esac			
+done

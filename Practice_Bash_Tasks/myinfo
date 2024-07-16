@@ -1,0 +1,14 @@
+#! /bin/bash
+
+read -p "Enter your login name: " name
+#list all files in home Dir#
+echo $(sudo ls /home/$name)
+
+#copy home dir to tmp##
+$(sudo cp -r /home/$name /tmp)
+
+#list running processes of this user#
+echo $(sudo ps -u $name)
+
+
+

@@ -1,0 +1,29 @@
+#! /bin/bash
+
+read -p " press your option U want to execute with ls: " option
+
+if [ $# -eq 0 ]
+then
+	var=$(pwd)
+else
+	var=$1
+fi	
+#set -x
+case "$option" in
+	-l)
+		 $(ls -l $var)
+		;;
+	-a)
+		echo $(ls -a $var) 
+		;;
+	-d)
+		echo $(ls -d $var)
+		;;
+	-i)
+		echo $(ls -i $var) 
+		;;
+	-R)
+		echo $(ls -R $var) 
+		;;
+esac		
+#set +x

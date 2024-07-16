@@ -1,0 +1,10 @@
+#! /bin/bash
+
+if [ -f $1 ]
+then
+	$(sudo cp $1 /tmp)
+elif [ -d $1 ]
+then
+	$(sudo cp -r $1 /tmp)
+fi	
+

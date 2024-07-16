@@ -1,0 +1,8 @@
+#! /bin/bash
+
+x=5
+
+function hi (){
+	echo "$x"
+
+}
