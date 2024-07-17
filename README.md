@@ -1,5 +1,5 @@
-# -----------------A Quick Breif about task.sh-----------------
-## A shell script called (task.sh) which has the following behavior, when you run the script it print the below menu.
+# -----------A Quick Breif about task.sh-----------
+    A shell script called (task.sh) which has the following behavior, when you run the script it print the below menu.
 ### main menu contains!!!
     - press i to add new contact
     - press v to view all contacts
