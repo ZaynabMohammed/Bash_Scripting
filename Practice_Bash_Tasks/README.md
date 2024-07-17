@@ -1,5 +1,5 @@
 
-# --------------------A quick breif about each script----------------------
+# --------------A quick breif about each script------------
 
 # myarr script
     A script called myarr that ask a user how many elements he wants to enter in an array, fill the array and then print it.
